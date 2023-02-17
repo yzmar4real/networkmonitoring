@@ -4,17 +4,17 @@ Python Code that allows Network Engineers to apply use-cases exploring Network O
 
 ## Overview
 
-Python Code that allows Network Engineers to run through their existing infrastructure running IOS Software using discovery commands to establish a baseline of the infrastructure state with saved CSV files to show physical connectivity, mac-addresses, etc. 
+Python Code that allows Network Engineers to enhance monitoring capability by targeting specific triggers within the network infrastructure. 
 
 ## Use Case Description
 
-This use case is particularly helpful in validating network documentation as well as for Engineers who have joined new networks without any basline documentation as a reference. PYATS's modular methods with parsing makes it incredibly easy to target specific datasets and document within CSV format. 
+This use case is particularly helpful in validating network observability & assurance by utilizing defined triggers. PYATS's modular methods with parsing makes it incredibly easy to extract the specific information required. (In this case route presence within the table).
 
 **Python**
 
-The script is written in python using PYATS to interact with the active devices, a definite set of commands based on experience as well as CSV files to store the outcomes.
+The script is written in python using PYATS to interact with the active devices, a GENIE model API to extract the state of a route within the routing table, and store the results in a json file.
 
-**Output**: The results of the commands are stored in individual CSV files. You can also find the raw configuration outputs as well as the exception errors stored in individual text files that would be created after each run.
+**Output**: The results of the state is stored in a json file. This can also be enhanced to execute follow up actions such as shutdown an interface, etc. 
 
 ## Contacts
 *Oluyemi Oshunkoya (yemi_o@outlook.com)
@@ -29,12 +29,8 @@ The script is written in python using PYATS to interact with the active devices,
 Python3.6 and above
 
 ## Toolbox
-The toolbox includes multiple librairies to clarify the code.
 
-IOS_Master_Function.py: includes all functions relating to parsing the configuration excerpts and providing relevant data.
-Leveraging Genie Parsers to extract a specific output, and saving it to the database.
-
-IOS_Master.py: includes the final script run which contains relevant commands, and stores returned values into a CSV file.
+Main.py: includes the main script run which contains relevant code to connect to the devices highlighted in the testbed file and returns the outcome as a json file.
 
 ## Step 1 - Downloading - Option A Using a Docker Image
 
@@ -69,9 +65,7 @@ source bin/activate
 
 ## Step 2 - Defining the Testbed for devices to be audited
 
-1. Edit genie.yml file to include parameters for your devices. It is usually advisable to start from the Core device outbound. 
-
-Note that you can update the list of devices based on your cdp discovery and rerun the script for maximum reach.
+1. Edit genie.yml file to include parameters for your devices. It is usually advisable to target the device with the most outbound interface.
 
 ## Step 3 - Executing the Script 
 
