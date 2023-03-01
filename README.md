@@ -2,6 +2,8 @@
 
 Python Code that allows Network Engineers to apply use-cases exploring Network Observability, Assurance and Automation to enhance Network Monitoring
 
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/yzmar4real/networkmonitoring)
+
 ## Overview
 
 Python Code that allows Network Engineers to enhance monitoring capability by targeting specific triggers within the network infrastructure. 
