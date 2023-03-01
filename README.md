@@ -32,6 +32,10 @@ Python3.6 and above
 
 Main.py: includes the main script run which contains relevant code to connect to the devices highlighted in the testbed file and returns the outcome as a json file.
 
+Gene.yml: this is the PYATS testbed file that contains the device/devices that would be connected to. 
+
+You can test this on Cisco's DevNet Sandbox Labs/IOS XE on CSR Latest Code - AlwaysOn/IOS XE on CSR Latest Code AlwaysOn1
+
 ## Step 1 - Downloading - Option A Using a Docker Image
 
 1. Download and setup docker suitable for your Operating System 
